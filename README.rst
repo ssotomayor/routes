@@ -1,3 +1,5 @@
+Original from bbangert/routes, this fork contains the Routes package through lib2to3 for Python 3.
+
 Routes is a Python re-implementation of the Rails routes system for mapping
 URL's to Controllers/Actions and generating URL's. Routes makes it easy to
 create pretty and concise URL's that are RESTful with little effort.
