@@ -99,7 +99,7 @@ class Route(object):
         
         # Build a req list with all the regexp requirements for our args
         self.req_regs = {}
-        for key, val in list(self.reqs.items()):
+        for key, val in self.reqs.items():
             self.req_regs[key] = re.compile('^' + val + '$')
         # Update our defaults and set new default keys if needed. defaults
         # needs to be saved
@@ -553,7 +553,7 @@ class Route(object):
         matchdict = match.groupdict()
         result = {}
         extras = self._default_keys - frozenset(list(matchdict.keys()))
-        for key, val in list(matchdict.items()):
+        for key, val in matchdict.items():
             if key != 'path_info' and self.encoding:
                 # change back into python unicode objects from the URL 
                 # representation
